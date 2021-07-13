@@ -1,0 +1,13 @@
+{
+  "name": "VNF-LCM-Emulator-minimal",
+  "version": "0.1.0",
+  "author": "Hammad Zafar",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonschema": "^1.4.0",
+    "mongoose": "^5.13.0"
+  }
+}

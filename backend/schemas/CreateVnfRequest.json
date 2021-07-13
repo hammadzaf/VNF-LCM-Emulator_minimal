@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "required": [
+      "vnfdId"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "vnfdId": {
+        "description": "An identifier with the intention of being globally unique.\n",
+        "type": "string"
+      },
+      "vnfInstanceName": {
+        "description": "Human-readable name of the VNF instance to be created.\n",
+        "type": "string"
+      },
+      "vnfInstanceDescription": {
+        "description": "Human-readable description of the VNF instance to be created.\n",
+        "type": "string"
+      },
+      "metadata": {
+        "description": "This type represents a list of key-value pairs. The order of the pairs in the list is not significant. In JSON, a set of keyvalue pairs is represented as an object. It shall comply with the provisions defined in clause 4 of IETF RFC 8259. In the following example, a list of key-value pairs with four keys (\"aString\", \"aNumber\", \"anArray\" and \"anObject\") is provided to illustrate that the values associated with different keys can be of different type.\n",
+        "type": "object"
+      }
+    }
+  }

@@ -17,3 +17,7 @@ Client side:
 1. Go to the frontend folder using terminal or windows powershell.
 2. Run "npm install". This will install the required packages and dependencies.
 3. Run "npm start". This will start the frontend application in the browser.
+
+Current methods supported:
+1. POST /vnf_instances
+2. GET /vnf_instances

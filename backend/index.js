@@ -22,7 +22,9 @@ const VNFInstance = new mongoose.Schema({
     vnfProvider: String,
     vnfProductName: String,
     vnfdVersion: String,
-    vnfSoftwareVersion: String
+    vnfSoftwareVersion: String,
+    instantiationState: String,
+    _links: Object
   });
 
 const Instance = mongoose.model('Instance', VNFInstance);
@@ -51,7 +53,9 @@ app.post('/vnflcm/v1/vnf_instances',(req, res, next)=>{
             vnfProvider: descriptor['nfv']['vnfd'][0]['provider'],
             vnfProductName: descriptor['nfv']['vnfd'][0]['product-name'],
             vnfdVersion: descriptor['nfv']['vnfd'][0]['version'],
-            vnfSoftwareVersion: descriptor['nfv']['vnfd'][0]['software-version']
+            vnfSoftwareVersion: descriptor['nfv']['vnfd'][0]['software-version'],
+            instantiationState: "NOT_INSTANTIATED",
+            _links: {"self": "URL of the resource"}
         })  
 
         instance.save().then(()=>{
